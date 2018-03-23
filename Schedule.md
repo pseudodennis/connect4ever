@@ -1,13 +1,13 @@
-#Tasks
+# Tasks
 - assign general areas of responsibility (done)
 - propose hardware design
 - figure out a ML approach
 - decide on a ML framework
 
-#Code areas
+# Code areas
 - 
 
-#Individual schedules
+# Individual schedules
 ## 1) March 22
   - Dennis: research the deeplearning4j
     

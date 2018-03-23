@@ -31,7 +31,7 @@
 # Individual schedules
 *week of...*
 ## 1) March 22
-  - Dennis: research the deeplearning4j
+  - Dennis: research the deeplearning4j framework; consider learning Python
     
   - Ian
     // Research the Torch / PyTorch machine learning framework
@@ -41,8 +41,7 @@
     // stuff i will do
     
 ## 2) March 29
-  - Dennis
-    // stuff i will do
+  - Dennis: research the choosen framework; look for code examples to determine overall structure
   - Ian
     // stuff i will do
   - Harriet
@@ -51,8 +50,7 @@
     // stuff i will do
 
 ## 3) April 5
-  - Dennis
-    // stuff i will do
+  - Dennis: break down a code example and attempt to plan out code structure
   - Ian
     // stuff i will do
   - Harriet
@@ -61,7 +59,7 @@
     // stuff i will do
 
 ## 4) April 12
-  - Dennis
+  - Dennis: code the first part of the structure (environment state?)
     // stuff i will do
   - Ian
     // stuff i will do
@@ -71,8 +69,7 @@
     // stuff i will do
 
 ## 5) April 19
-  - Dennis
-    // stuff i will do
+  - Dennis: code the second part of the structure (setting up the framework?)
   - Ian
     // stuff i will do
   - Harriet
@@ -81,8 +78,7 @@
     // stuff i will do
 
 ## 6) April 26
-  - Dennis
-    // stuff i will do
+  - Dennis: code the third part of the structure (handing off the learned policy)
   - Ian
     // stuff i will do
   - Harriet
@@ -91,8 +87,7 @@
     // stuff i will do
 
 ## 7) May 3
-  - Dennis
-    // stuff i will do
+  - Dennis: help troubleshoot the hardware and freak out
   - Ian
     // stuff i will do
   - Harriet

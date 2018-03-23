@@ -19,6 +19,7 @@
 1. Learning phase
     - Setup the state of the world/envrionment as an input
     - Setup the neural network in the framework to learn stuff
+    - Run it a bunch of times and save the learned policy
 2. Implementation phase
     - Computer output a move (int 1-7)
     - Hardware makes the move

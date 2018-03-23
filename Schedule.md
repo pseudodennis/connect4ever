@@ -32,7 +32,7 @@
   - Dennis: research the deeplearning4j
     
   - Ian
-    // stuff i will do
+    // Research the Torch / PyTorch machine learning framework
   - Harriet
     // stuff i will do
   - Joey

@@ -29,6 +29,7 @@
     - Computer makes a new move
 
 # Individual schedules
+    *week of...*
 ## 1) March 22
   - Dennis: research the deeplearning4j
     

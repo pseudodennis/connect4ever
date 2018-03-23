@@ -1,10 +1,16 @@
-This is the schedule
+#Tasks
+- assign general areas of responsibility (done)
+- propose hardware design
+- figure out a ML approach
+- decide on a ML framework
 
-Week starting...
+#Code areas
+- 
 
-# 1) March 22
-  - Dennis
-    // stuff i will do
+#Individual schedules
+## 1) March 22
+  - Dennis: research the deeplearning4j
+    
   - Ian
     // stuff i will do
   - Harriet
@@ -12,7 +18,7 @@ Week starting...
   - Joey
     // stuff i will do
     
-# 2) March 29
+## 2) March 29
   - Dennis
     // stuff i will do
   - Ian
@@ -22,7 +28,7 @@ Week starting...
   - Joey
     // stuff i will do
 
-# 3) April 5
+## 3) April 5
   - Dennis
     // stuff i will do
   - Ian
@@ -32,7 +38,7 @@ Week starting...
   - Joey
     // stuff i will do
 
-# 4) April 12
+## 4) April 12
   - Dennis
     // stuff i will do
   - Ian
@@ -42,7 +48,7 @@ Week starting...
   - Joey
     // stuff i will do
 
-# 5) April 19
+## 5) April 19
   - Dennis
     // stuff i will do
   - Ian
@@ -52,7 +58,7 @@ Week starting...
   - Joey
     // stuff i will do
 
-# 6) April 26
+## 6) April 26
   - Dennis
     // stuff i will do
   - Ian
@@ -62,7 +68,7 @@ Week starting...
   - Joey
     // stuff i will do
 
-# 7) May 3
+## 7) May 3
   - Dennis
     // stuff i will do
   - Ian

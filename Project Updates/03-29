@@ -9,21 +9,25 @@ Updated schedule
 a. list responsibilities for this past week for each person and a percentage of completion;  
   - Ian: 
   - Dennis:
-  - Harriet:
+  - Harriet: Learn about machine learning and research helpful resources - 90%
   - Joey:
 b. list responsibilities for the coming week for each person and likelihood of completion  
   - Ian: 
   - Dennis:
-  - Harriet:
+  - Harriet: Start working on the classes needed for the environment - 100% likelihood
   - Joey:
   
 Resources  
 c. What are the most helpful resources you have found in moving forward?  
+  - https://www.codingame.com/home
 
 d. What resources / information / topics do you need ?  
+  - A machine learning tutorial or a python tutorial.
 
 Most interesting language feature explored this week  
-Most frustrating aspect of project this week  
+  - Recurrent Neural Networks: https://colah.github.io/posts/2015-08-Understanding-LSTMs/
+Most frustrating aspect of project this week
+  - Learning about Machine Learning.
 
 Code Review  
 a. All current code – well commented  

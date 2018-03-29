@@ -1,33 +1,50 @@
 Project Status Update  
-Team Members : [list here]  
-Date:  
-Project Name:  
+
+Date:  3/29/2018
+Project Name: connect4ever
+Team Members: Dennis, Ian, Harriet, Joey
 Project Collaboration site: (Github)[https://github.com/pseudodennis/connect4ever]  
 
 INCLUDE AT LEAST THE FOLLOWING INFORMATION:  
 Updated schedule  
 a. list responsibilities for this past week for each person and a percentage of completion;  
-  - Ian: 
+  - Ian: I researched the PyTorch and Torch frameworks. I learned about their applicability and specific strengths and weaknesses. I also pulled together textbook files that I shared with my teammates. I completed this 100 percent.
   - Dennis:
   - Harriet: Learn about machine learning and research helpful resources - 90%
-  - Joey:
+  - Joey: started coding
+          made sim
+          started parts list
+
 b. list responsibilities for the coming week for each person and likelihood of completion  
-  - Ian: 
+  - Ian: My responsibility is to find working machine learning project examples for the PyTorch, Tensor Flow, and Deeplearning4j frameworks. We can use these to further our knowledge of the subject and to even modify into our connect4 project. I will complete this 100 percent.
   - Dennis:
   - Harriet: Start working on the classes needed for the environment - 100% likelihood
-  - Joey:
-  
+  - Joey: test last molding methods
+          finish parts list
+          find integration for java  
+          
 Resources  
 c. What are the most helpful resources you have found in moving forward?  
-  - https://www.codingame.com/home
+  - J: youtube and tinkercad.com
+  - H://www.codingame.com/home
+  - 
+
 
 d. What resources / information / topics do you need ?  
+  - a walkthrough on how to implement a game learning neural network in Java or Python
+  - Joey: tutorials / stuff from part list / old toaster? / pure lye / bacon fat?
   - A machine learning tutorial or a python tutorial.
 
+
 Most interesting language feature explored this week  
-  - Recurrent Neural Networks: https://colah.github.io/posts/2015-08-Understanding-LSTMs/
-Most frustrating aspect of project this week
-  - Learning about Machine Learning.
+-	The most interesting language feature we’ve found is neural network programming. The idea of the concept being a “black box” is very interesting. We are going to work hard on integrating our output into Harriet’s model. Right now, the biggest part of exploring neural network is getting past examples to work off of.
+- Joey: arduino has libraries 
+-   - Recurrent Neural Networks: https://colah.github.io/posts/2015-08-Understanding-LSTMs/
+
+Most frustrating aspect of project this week  
+  - Joey: setting up the input from the switches
+  -	The most frustrating aspect was trying to break down how exactly to “score” the connect4 games so we could plug this into our neural network to get output. We think we’ve figured out the best way to account for scores. We are also having some trouble figuring out the best framework and language to use, but we are breaking this down and are going to decide on Java vs. Python. We’ll weigh the pros and cons and library of past examples to base our decision off of.
+Learning about Machine Learning.
 
 Code Review  
 a. All current code – well commented  

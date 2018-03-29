@@ -1,7 +1,7 @@
 Project Status Update  
 Team Members : [list here]  
-Date:  3/29/2018
-Project Name: connect4ever
+Date:  
+Project Name:  
 Project Collaboration site: (Github)[https://github.com/pseudodennis/connect4ever]  
 
 INCLUDE AT LEAST THE FOLLOWING INFORMATION:  
@@ -10,24 +10,28 @@ a. list responsibilities for this past week for each person and a percentage of 
   - Ian: 
   - Dennis:
   - Harriet:
-  - Joey:
+  - Joey: started coding
+          made sim
+          started parts list
 b. list responsibilities for the coming week for each person and likelihood of completion  
   - Ian: 
   - Dennis:
   - Harriet:
-  - Joey:
-  
+  - Joey: test last molding methods
+          finish parts list
+          find integration for java  
+          
 Resources  
 c. What are the most helpful resources you have found in moving forward?  
-  - The documentation for deeplearning4j and TensorFlow
-  - Machine Learning Guide podcast
+Joey: youtube and tinkercad.com
 
-d. What resources / information / topics do you need ?  
-  - a walkthrough on how to implement a game learning neural network in Java or Python
+d. What resources / information / topics do you need ? 
+Joey: tutorials / stuff from part list / old toaster? / pure lye / bacon fat?
 
-Most interesting language feature explored this week  
-
+Most interesting language feature explored this week
+Joey: arduino has libraries 
 Most frustrating aspect of project this week  
+Joey: setting up the input from the switches
 
 Code Review  
 a. All current code – well commented  

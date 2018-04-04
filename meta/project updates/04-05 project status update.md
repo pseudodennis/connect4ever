@@ -14,7 +14,7 @@
   
 ### responsibilities for the coming week for each person and likelihood of completion
   - Dennis: 
-  - Ian: Research AI Training in relation to Connnect 4. Find a player algorithm to train our neural network against and implement into code. Get Deeplearning4j framework running. Come with a deeplearning4j example that I can break down and understand. (75% chance of completion).
+  - Ian: Research AI Training in relation to machine learning & Connnect 4. Find a player algorithm to train our neural network against and implement into code. Get Deeplearning4j framework running & look at examples. (90% chance of completion).
   - Harriet: 
   - Joey: 
 

@@ -34,12 +34,12 @@
 ## Journal  
 ### Most interesting language feature explored this week  
   - the training methods in the dl4j examples
-  -  
+  - the dl4j examples that actually run
   -  
   -  
 ### Most frustrating aspect of project this week  
   - Trying to get Github Python examples running
-  -  
+  - Installing tensorFlow, python, and dl4j 
   -  
   -  
 

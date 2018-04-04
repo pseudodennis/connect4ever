@@ -9,13 +9,13 @@
 ### responsibilities for this past week and  percentage of completion
   - Dennis:  Start coding the neural network: Find some working code examples we can go over as a group and begin to understand (%).  
   - Ian: Start coding the neural network: My responsibility is to find working machine learning project examples for the PyTorch, Tensor Flow, and Deeplearning4j frameworks. We can use these to further our knowledge of the subject and to even modify into our connect4 project (80%).
-  - Harriet: Start working on the classes needed for the model and environment (%).  
+  - Harriet: Start working on the classes needed for the model and environment (50%).  
   - Joey: test last molding methods (100%), finish parts list (100%), find integration for java (85%), do more coding (%).  
-  
+
 ### responsibilities for the coming week for each person and likelihood of completion
   - Dennis: Find a relevant deeplearning4j framework I can parse with comments and explain to the group (80%);
   - Ian: Research AI Training in relation to Connnect 4. Find a player algorithm to train our neural network against and implement into code. Get Deeplearning4j framework running. Come with a deeplearning4j example that I can break down and understand. (75% chance of completion).
-  - Harriet: 
+  - Harriet: Work on the classes needed for the model and environment.
   - Joey: 
 
 ## Resources  
@@ -24,10 +24,10 @@
   -  
   - Java Connect4 Game Github Repo from Deloschang 
   - Java Connect4 Machine Learning Repo from Chris Ballinger
+  
 ### What resources / information / topics do you need?  
+  - I'm looking for a good win algorithm, because I'm sure there is one I can use instead of making my own.
   - better examples with clear code
-  -  
-
   - Joey: help with picking the right relay 
 
 

@@ -20,11 +20,27 @@
 
 ## Resources  
 ### What are the most helpful resources you have found in moving forward?  
+  - 
+  -  
+  -  
+  -  
 ### What resources / information / topics do you need?  
+  - 
+  -  
+  -  
+  -  
 
 ## Journal  
 ### Most interesting language feature explored this week  
+  - 
+  -  
+  -  
+  -  
 ### Most frustrating aspect of project this week  
+  - 
+  -  
+  -  
+  -  
 
 ## Code Review  
   - All current code – well commented  

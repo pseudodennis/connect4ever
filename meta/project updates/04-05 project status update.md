@@ -13,26 +13,26 @@
   - Joey: test last molding methods (100%), finish parts list (100%), find integration for java (85%), do more coding (%).  
   
 ### responsibilities for the coming week for each person and likelihood of completion
-  - Dennis: 
+  - Dennis: Find a relevant deeplearning4j framework I can parse with comments and explain to the group (80%);
   - Ian: Research AI Training in relation to Connnect 4. Find a player algorithm to train our neural network against and implement into code. Get Deeplearning4j framework running. Come with a deeplearning4j example that I can break down and understand. (75% chance of completion).
   - Harriet: 
   - Joey: 
 
 ## Resources  
 ### What are the most helpful resources you have found in moving forward?  
-  - 
+  - dl4j documentation and chatroom
   -  
   - Java Connect4 Game Github Repo from Deloschang 
   - Java Connect4 Machine Learning Repo from Chris Ballinger
 ### What resources / information / topics do you need?  
-  - 
+  - better examples with clear code
   -  
   -  
   -  
 
 ## Journal  
 ### Most interesting language feature explored this week  
-  - 
+  - the training methods in the dl4j examples
   -  
   -  
   -  

@@ -27,8 +27,9 @@
 ### What resources / information / topics do you need?  
   - better examples with clear code
   -  
-  -  
-  -  
+
+  - Joey: help with picking the right relay 
+
 
 ## Journal  
 ### Most interesting language feature explored this week  

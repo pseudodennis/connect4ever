@@ -1,8 +1,8 @@
 # Project Status Update  
-Team Members : Dennis, Harriet, Ian, Joey  
-Date: DATEOFCLASS  
-Project Name : Connect4Ever  
-Project Collaboration sites: [GitHub](https://github.com/pseudodennis/connect4ever), [Discord](https://discord.gg/vPjCC7r)  
+**Team Members:** Dennis, Harriet, Ian, Joey  
+**Date:** DATEOFCLASS  
+**Project Name:** Connect4Ever  
+**Project Collaboration sites:** [GitHub](https://github.com/pseudodennis/connect4ever), [Discord](https://discord.gg/vPjCC7r)  
 
 *INCLUDE AT LEAST THE FOLLOWING INFORMATION:*  
 ## Updated schedule  

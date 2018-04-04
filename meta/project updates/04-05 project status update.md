@@ -31,7 +31,7 @@
   - 
   -  
   -  
-  - Joey: help with picking the right relay
+  - Joey: help with picking the right relay 
 
 ## Journal  
 ### Most interesting language feature explored this week  

@@ -13,8 +13,8 @@
   - Joey: test last molding methods (100%), finish parts list (100%), find integration for java (85%), do more coding (%).  
   
 ### responsibilities for the coming week for each person and likelihood of completion
-  - Dennis: 
-  - Ian: 
+  - Dennis: Find a relevant deeplearning4j framework I can parse with comments and explain to the group (80%);
+  - Ian: Research AI Training in relation to machine learning & Connnect 4. Find a player algorithm to train our neural network against and implement into code. Get Deeplearning4j framework running & look at examples. (90% chance of completion).
   - Harriet: 
   - Joey: - build prototype model (100%)
           - find way to intagrat my code with java (75%)

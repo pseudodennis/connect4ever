@@ -15,7 +15,7 @@
 ### responsibilities for the coming week for each person and likelihood of completion
   - Dennis: Find a relevant deeplearning4j framework I can parse with comments and explain to the group (80%);
   - Ian: Research AI Training in relation to Connnect 4. Find a player algorithm to train our neural network against and implement into code. Get Deeplearning4j framework running. Come with a deeplearning4j example that I can break down and understand. (75% chance of completion).
-  - Harriet: Work on the classes needed for the model and environment.
+  - Harriet: Work on the classes needed for the model and environment (80%).
   - Joey:  - build prototype model (100%)
            - find way to intagrat my code with java (75%)
            - write code for relay (60 %)

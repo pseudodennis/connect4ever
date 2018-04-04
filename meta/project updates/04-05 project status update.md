@@ -16,32 +16,38 @@
   - Dennis: Find a relevant deeplearning4j framework I can parse with comments and explain to the group (80%);
   - Ian: Research AI Training in relation to Connnect 4. Find a player algorithm to train our neural network against and implement into code. Get Deeplearning4j framework running. Come with a deeplearning4j example that I can break down and understand. (75% chance of completion).
   - Harriet: Work on the classes needed for the model and environment.
-  - Joey: 
+  - Joey:  - build prototype model (100%)
+           - find way to intagrat my code with java (75%)
+           - write code for relay (60 %)
+           - find 3D modeling program and start model parts for 3D printer (25%)
+
 
 ## Resources  
 ### What are the most helpful resources you have found in moving forward?  
   - dl4j documentation and chatroom
-  -  
+  - https://circuits.io
+  - http://tinkercad.com/
   - Java Connect4 Game Github Repo from Deloschang 
   - Java Connect4 Machine Learning Repo from Chris Ballinger
   
 ### What resources / information / topics do you need?  
   - I'm looking for a good win algorithm, because I'm sure there is one I can use instead of making my own.
   - better examples with clear code
-  - Joey: help with picking the right relay 
+  - help with picking the right relay 
+
 
 
 ## Journal  
 ### Most interesting language feature explored this week  
   - the training methods in the dl4j examples
   - the dl4j examples that actually run
-  -  
-  -  
+  -  motor torque calculations
+  -  relay circuits 
+
 ### Most frustrating aspect of project this week  
   - Trying to get Github Python examples running
   - Installing tensorFlow, python, and dl4j 
-  -  
-  -  
+  - the paperwork/documetion
 
 ## Code Review  
   - All current code – well commented  

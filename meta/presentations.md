@@ -1,3 +1,7 @@
+## 04/12/2018
+- [Better Off Dead: Math Class](https://youtu.be/Xo1RrZFvWjE)  
+
+
 ## 04/05/2018  
 
 - [How to Build a Neural Network](https://stevenmiller888.github.io/mind-how-to-build-a-neural-network/)

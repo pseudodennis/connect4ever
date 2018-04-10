@@ -1,0 +1,3 @@
+[submodule "dl4j-examples"]
+	path = dl4j-examples
+	url = https://github.com/pseudodennis/connect4ever

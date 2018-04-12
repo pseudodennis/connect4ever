@@ -2,20 +2,21 @@ public class Dignity
 {
     public static void main(String[] args)
     {
-
-        /**
-         *  construct players
-         */
-        CPU player1 = new CPU();
-        CPU player2 = new CPU();
-        // Human player3 = new Human();
-        // NN player4 = new NN();
-
-
+       
+        
         /**
          *  construct gameboard
          */
         Board board = new Board(6, 7);
+        
+        
+        /**
+         *  construct players
+         */
+        CPU player1 = new CPU(board);
+        CPU player2 = new CPU(board);
+        // Human player3 = new Human();
+        // NN player4 = new NN();
 
 
         /**

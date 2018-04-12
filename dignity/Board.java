@@ -1,4 +1,6 @@
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * @author hjpoe
@@ -41,16 +43,20 @@ public class Board
 	}
 
 
+	public boolean isGameOver()
+	{
+		return gameOver;
+	}
+
 	/**
 	 * One gameOver to rule them all
 	 * @return
 	 */
-	public boolean isGameOver()
+	public void checkGameOver()
 	{
-		this.gameOver = false;
-		if (this.win() || this.tie())
-			this.gameOver = true;
-		return this.gameOver;
+		this.win();
+		this.tie();
+
 	}
 
 	/**
@@ -67,7 +73,7 @@ public class Board
 		int iCol = 0;   // col index number for incrementing
 		int cl = 4;     // length of chain for indexing
 		boolean win = false;
-		
+
 // check for horizontal wins
 
 		// move through each cell, unless the cells are within 4 spaces of nCols
@@ -79,7 +85,7 @@ public class Board
 			for (iCol = 0; iCol <= nCols - cl && !win; iCol++)
 			{
 				// grab the starting cell value and put in hashset
-				int cellVal = board[iRow][iCol];
+				int cellVal = boardState[iRow][iCol];
 				if (cellVal != 0)
 				{
 					Set<Integer> hs = new HashSet<>(Arrays.asList(cellVal));
@@ -87,8 +93,8 @@ public class Board
 					// iterate through the next three cells, if add==true, win=false
 					for (int i = 1; i <= 3 ; i++)
 					{
-						if (hs.add(board[iRow][iCol + i])==true)
-						win = false;
+						if (hs.add(boardState[iRow][iCol + i])==true)
+							win = false;
 					}
 				}
 			} // end of moving through columns
@@ -106,7 +112,7 @@ public class Board
 			for (iRow = 0; iRow <= nRows - cl && !win; iRow++)
 			{
 				// grab the starting cell value and put in hashset
-				int cellVal = board[iRow][iCol];
+				int cellVal = boardState[iRow][iCol];
 				if (cellVal != 0)
 				{
 					Set<Integer> hs = new HashSet<>(Arrays.asList(cellVal));
@@ -115,8 +121,8 @@ public class Board
 					// iterate through the next three cells, if add==true, win=false
 					for (int i = 1; i <= 3; i++)
 					{
-						if (hs.add(board[iRow + i][iCol]))
-						win = false;
+						if (hs.add(boardState[iRow + i][iCol]))
+							win = false;
 					}
 				}
 			} // end of moving through columns
@@ -134,7 +140,7 @@ public class Board
 			for (iRow = 0; iRow <= nRows - cl && !win; iRow++)
 			{
 				// grab the starting cell value and put in hashset
-				int cellVal = board[iRow][iCol];
+				int cellVal = boardState[iRow][iCol];
 				if (cellVal != 0)
 				{
 					Set<Integer> hs = new HashSet<>(Arrays.asList(cellVal));
@@ -143,8 +149,8 @@ public class Board
 					// iterate through the next three cells, if add==true, win=false
 					for (int i = 1; i <= 3; i++)
 					{
-						if (hs.add(board[iRow + i][iCol + i]))
-						win = false;
+						if (hs.add(boardState[iRow + i][iCol + i]))
+							win = false;
 					}
 				}
 			} // end of moving through columns
@@ -161,7 +167,7 @@ public class Board
 			for (iCol = 0; iCol <= nCols - cl && !win; iCol++)
 			{
 				// grab the starting cell value and put in hashset
-				int cellVal = board[iRow][iCol];
+				int cellVal = boardState[iRow][iCol];
 				if (cellVal != 0)
 				{
 					Set<Integer> hs = new HashSet<>(Arrays.asList(cellVal));
@@ -170,13 +176,13 @@ public class Board
 					// iterate through the next three cells, if add==true, win=false
 					for (int i = 1; i < cl; i++)
 					{
-						if (hs.add(board[iRow - i][iCol + i]))
-						win = false;
+						if (hs.add(boardState[iRow - i][iCol + i]))
+							win = false;
 					}
 				}
 			} // end of moving through columns
 		}
-		
+
 		return win;
 	} // end of win
 
@@ -188,7 +194,7 @@ public class Board
 	public boolean tie()
 	{
 		boolean gameOver = false;
-		if (this.movesLeft<1)
+		if (this.movesLeft==2)
 		{
 			gameOver = true;
 		}
@@ -210,7 +216,7 @@ public class Board
 		for (int i = 5; i>=0 || !moveYet; i--)
 		{
 			// if the cell is empty, fill it the current player color
-			if (boardState[i][column] == 0)
+			if (this.boardState[i][column] == 0 && !moveYet)
 			{
 				if (player1turn)
 				{
@@ -221,10 +227,15 @@ public class Board
 					boardState[i][column] = player2color;
 				}
 
-				this.movesLeft--;
+
 				moveYet = true;
 			}
+
 		}
+
+		this.movesLeft--;
+		this.checkGameOver();
+
 
 		// check for win and change score, or else wait for other player to move
 		if (this.isGameOver() && player1turn)
@@ -258,6 +269,29 @@ public class Board
 	{
 		return finalScore;
 	}
+
+
+
+	public String toString()
+	{
+		int iCol = 0;
+		int iRow = 0;
+		int nCols = 7;
+		int nRows = 6;
+		String boardString = "";
+
+		for (iRow=0; iRow<nRows; iRow++)
+		{
+			for (iCol = 0; iCol < nCols; iCol++)
+			{
+				boardString = boardString + "[" + boardState[iRow][iCol] + "]";
+			}
+			boardString = boardString + "\n";
+		}
+
+		return boardString;
+	}
+
 
 
 } // end of Board

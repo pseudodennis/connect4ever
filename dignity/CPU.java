@@ -15,7 +15,7 @@ public class CPU {
 
 		while (playerBoard[0][colPick] != 0)
 		{
-			colPick = rand.nextInt(6);
+			colPick = rand.nextInt(7);
 		}
 
 		return colPick;

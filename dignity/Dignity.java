@@ -1,23 +1,22 @@
 public class Dignity
 {
-    public static void main(String[] args)
+    public static void main(String[] args) throws InterruptedException
     {
-       
-        
+
+        /**
+         *  construct players
+         */
+        CPU player1 = new CPU();
+        CPU player2 = new CPU();
+        // Human player3 = new Human();
+        // NN player4 = new NN();
+
+
         /**
          *  construct gameboard
          */
         Board board = new Board(6, 7);
-        
-        
-        /**
-         *  construct players
-         */
-        CPU player1 = new CPU(board);
-        CPU player2 = new CPU(board);
-        // Human player3 = new Human();
-        // NN player4 = new NN();
-
+        System.out.println(board.toString());
 
         /**
          *  play game
@@ -35,17 +34,26 @@ public class Dignity
                  * board.addPiece() accepts that int as the column in which to place the piece.
                  * The board will validate and check for a win after every move.
                  */
+
+
             }
+	        System.out.println(board.toString());
+	        Thread.sleep(500);
 
             // then player two moves
             while (!board.isPlayer1Turn())
             {
                 board.addPiece(player2.move(board.getBoardState()));
             }
+	        System.out.println(board.toString());
+
+	        Thread.sleep(500);
 
         }
 
-        System.out.println(board.getFinalScore())
+	    System.out.println(board.toString());
+
+	    System.out.println(board.getFinalScore());
 
 
     } // end of main()

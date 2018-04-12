@@ -56,8 +56,7 @@ public class Board
 	{
 		if (this.win())
 			this.gameOver = true;
-		if (this.tie())
-			this.gameOver = true;
+		this.tie();
 	}
 
 	/**
@@ -232,9 +231,9 @@ public class Board
 
 
 				moveYet = true;
-			}
+			} // end outer if statement
 
-		}
+		} // end for loop
 
 		this.movesLeft--;
 		this.checkGameOver();

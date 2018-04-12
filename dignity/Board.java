@@ -54,9 +54,10 @@ public class Board
 	 */
 	public void checkGameOver()
 	{
-		this.win();
-		this.tie();
-
+		if (this.win())
+			this.gameOver = true;
+		if (this.tie())
+			this.gameOver = true;
 	}
 
 	/**
@@ -184,6 +185,7 @@ public class Board
 		}
 
 		return win;
+
 	} // end of win
 
 	/**
@@ -193,12 +195,13 @@ public class Board
 
 	public boolean tie()
 	{
-		boolean gameOver = false;
-		if (this.movesLeft==2)
+		boolean tie = false;
+		if (this.movesLeft==0)
 		{
-			gameOver = true;
+			tie = true;
 		}
-		return gameOver;
+		return tie;
+
 	} // end of tie
 
 

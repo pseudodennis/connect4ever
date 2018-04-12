@@ -1,22 +1,23 @@
 import java.util.*;
 
 public class CPU {
-	
-	public CPU(Board obj) {
-		
-		Board obj1 = new Board(5, 6);
-		
+
+	public CPU() {
+
+
 	}
-	
+
 	public int move(int[][] playerBoard) {
-		Board obj1 = new Board(5, 6);
-		
-		obj1.getBoardState();
-		
+
 		Random rand = new Random();
-		
-		int colPick = rand.nextInt(6);
-		
+
+		int colPick = rand.nextInt(7);
+
+		while (playerBoard[0][colPick] != 0)
+		{
+			colPick = rand.nextInt(6);
+		}
+
 		return colPick;
 	}
 

@@ -25,26 +25,26 @@
 ## Resources  
 ### What are the most helpful resources you have found in moving forward?  
   - 
-  -  
+  -  https://github.com/ianj98/Connect-4-AI
   -  https://iamtrask.github.io/2015/07/12/basic-python-network/
   -  
 ### What resources / information / topics do you need?  
-  - 
+  - Neural Networks book by O'Reilly
   -  
   -  
   -  
 
 ## Journal  
 ### Most interesting language feature explored this week  
-  - 
-  -  
+  -  How efficiently a random algorithm can win a game of Connect4
+  -  INDArrays
   -  Using a Hashset to check for a win was cool.
   -  
 ### Most frustrating aspect of project this week  
   - 
   -  
   -  Infinite loops!
-  -  
+  -  Debugging in general
 
 ## Code Review  
   - All current code – well commented  

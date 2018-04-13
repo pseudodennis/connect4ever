@@ -15,7 +15,7 @@
 ### responsibilities for the coming week for each person and likelihood of completion
   - Dennis: 
   - Ian: 
-  - Harriet: Get Dignity working and help with the NN. 99%
+  - Harriet: Help with the NN. 99%
   - Joey: 
 
 

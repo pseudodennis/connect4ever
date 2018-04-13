@@ -14,7 +14,7 @@
   
 ### responsibilities for the coming week for each person and likelihood of completion
   - Dennis: 
-  - Ian: 
+  - Ian: Now that we have the chaos class working, build a class for an algorithm solver (probably named algo). 90%
   - Harriet: Clean up the class and split it into seperate classes. 99%
   - Joey: 
 

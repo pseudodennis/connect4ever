@@ -8,7 +8,7 @@
 ## Updated schedule  
 ### responsibilities for this past week and  percentage of completion
   - Dennis: Find a relevant deeplearning4j framework I can parse with comments and explain to the group (%);
-  - Ian: Research AI Training in relation to Connnect 4. Find a player algorithm to train our neural network against and implement into code. Get Deeplearning4j framework running. (%).
+  - Ian: Research AI Training in relation to Connnect 4. Find a player algorithm to train our neural network against and implement into code. Get Deeplearning4j framework running. (75%).
   - Harriet: Work on the classes needed for the model and environment (90%).
   - Joey: - build prototype model (%) - find way to intagrat my code with java (%) - write code for relay (%) - find 3D modeling program and start model parts for 3D printer (%)
   

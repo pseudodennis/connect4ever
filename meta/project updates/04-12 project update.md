@@ -15,7 +15,7 @@
 ### responsibilities for the coming week for each person and likelihood of completion
   - Dennis: 
   - Ian: 
-  - Harriet: Help with the NN. 99%
+  - Harriet: Clean up the class and split it into seperate classes. 99%
   - Joey: 
 
 

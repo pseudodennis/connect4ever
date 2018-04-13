@@ -14,6 +14,7 @@ public class Board
 	private int movesLeft;
 	private int finalScore; // positive for player1 victory, negative for player2 victory
 	private boolean gameOver = false;
+	private boolean tiegame = false;
 	private boolean player1turn;
 
 	private int player1color = 1;
@@ -48,17 +49,17 @@ public class Board
 		return gameOver;
 	}
 
-	/**
+/*	*//**
 	 * One gameOver to rule them all
 	 * @return
-	 */
+	 *//*
 	public void checkGameOver()
 	{
 		if (this.win())
 			this.gameOver = true;
 		if (this.tie())
 			this.gameOver = true;
-	}
+	}*/
 
 	/**
 	 * The win method determines if the game has been won.
@@ -66,7 +67,7 @@ public class Board
 	 */
 
 
-	public boolean win()
+	public void win()
 	{
 		int nRows = 6;  // the number of rows in the board
 		int nCols = 7;  // the number of cols in the board
@@ -184,7 +185,8 @@ public class Board
 			} // end of moving through columns
 		}
 
-		return win;
+		if (win)
+			this.gameOver = true;
 
 	} // end of win
 
@@ -193,17 +195,20 @@ public class Board
 	 * @return A boolean that is true if the game is a tie.
 	 */
 
-	public boolean tie()
+	public void tie()
 	{
-		boolean tie = false;
 		if (this.movesLeft==0)
 		{
-			tie = true;
+			this.gameOver = true;
+			this.tiegame = true;
 		}
-		return tie;
 
 	} // end of tie
 
+	public boolean isTiegame()
+	{
+		return tiegame;
+	}
 
 	/**
 	 * In the main method, wrap each player turn in
@@ -224,20 +229,21 @@ public class Board
 				if (player1turn)
 				{
 					boardState[i][column] = player1color;
+					moveYet = true;
 				}
 				else
 				{
 					boardState[i][column] = player2color;
+					moveYet = true;
 				}
 
-
-				moveYet = true;
 			}
 
 		}
 
 		this.movesLeft--;
-		this.checkGameOver();
+		this.win();
+		this.tie();
 
 
 		// check for win and change score, or else wait for other player to move

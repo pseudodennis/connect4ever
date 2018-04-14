@@ -13,9 +13,9 @@
   - Joey: - build prototype model (%) - find way to intagrat my code with java (%) - write code for relay (%) - find 3D modeling program and start model parts for 3D printer (%). 
   
 ### responsibilities for the coming week for each person and likelihood of completion
-  - Dennis: Implement a very stupid neural network so we have something to work from and tune. (60%). 
-  - Ian: Now that we have the chaos class working, build a class for an algorithm solver (probably named algo). 90%. 
-  - Harriet: Clean up the class and split it into seperate classes. 99%. 
+  - Dennis: Implement a very stupid neural network so we have something to work from and tune. (60%).  
+  - Ian: Now that we have the chaos class working, build a class for an algorithm solver (probably named algo). 90%.  
+  - Harriet: Clean up the class and split it into seperate classes. 99%.  
   - Joey:  
 
 

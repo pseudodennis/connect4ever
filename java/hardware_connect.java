@@ -1,4 +1,3 @@
-package hardware_connect;
 import com.fazecast.jSerialComm.SerialPort;
 
 import java.io.PrintWriter;

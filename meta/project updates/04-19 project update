@@ -7,10 +7,10 @@
 *INCLUDE AT LEAST THE FOLLOWING INFORMATION:*  
 ## Updated schedule  
 ### responsibilities for this past week and  percentage of completion
-  - Dennis: 
-  - Ian: 
-  - Harriet: 
-  - Joey: 
+  - Dennis: Implement a very stupid neural network so we have something to work from and tune. (80%). - I found a RL framework that plays Tic Tac Toe we can modify, but it does not use a NN.  
+  - Ian: Now that we have the chaos class working, build a class for an algorithm solver (probably named algo). 90%.  
+  - Harriet: Clean up the class and split it into seperate classes. 99%.  
+  - Joey: start to build parts with autoCad and Rhino(100%). Look into school's 3D printers(80%). Order parts with venmo money(98%). 
   
 ### responsibilities for the coming week for each person and likelihood of completion
   - Dennis: 

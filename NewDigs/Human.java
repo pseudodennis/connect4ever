@@ -4,15 +4,16 @@
  * to pass it to the main class. 
  */
 
-public class Human {
-	
+public class Human 
+{	
 	/**
 	 * @param playerBoard A two dimentional array that holds the
 	 * board. We don't use this.
 	 * @return The column that the player went in.
 	 */
 	
-	public int move(int[][] playerBoard) {
+	public int move(int[][] playerBoard) 
+	{
 		int colPick;
 		
 		do {

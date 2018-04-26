@@ -1,5 +1,10 @@
 package connect4ever;
 
+/**
+ * The GameOver class contains utilities for game overs. It can check
+ * to see if the game is over and see if the game was a tie. 
+ */
+
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
@@ -9,6 +14,10 @@ public class GameOver
     private static boolean gameOver;
     private static boolean win;
     private static boolean tieGame;
+    
+    /**
+     * The constructor sets all fields to false.
+     */
 
     public GameOver() {
         gameOver = false;
@@ -26,6 +35,11 @@ public class GameOver
         checkGameOver();
         return gameOver;
     }
+    
+    /**
+     * The checkGameOver method checks if the game is over using the win
+     * method. It also checks to see if the game was a tie.
+     */
 
     public static void checkGameOver()
     {

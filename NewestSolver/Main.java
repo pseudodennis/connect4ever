@@ -26,6 +26,7 @@ public class Main {
     {
         System.exit(0);
     }
+	hardware_connect.starter(true);
 	theBoard.printBoard();
         //While the game has not finished
 	while(!theBoard.checkGameOver()) {
@@ -37,6 +38,8 @@ public class Main {
                     try {
                         do {
                             System.out.print("\nSelect a column to drop your piece (1-7): ");
+                            GamePlay gp = new GamePlay();
+                            System.out.println(gp.getValue() + "HELO");
                             Scanner in = new Scanner(System.in);
                             //columnPosition = in.nextInt();
                             columnPosition = hardware_connect.getNum();

@@ -86,6 +86,7 @@ public class State {
                     rowPosition = row;
             }
         }
+        hardware_connect.sendNum(rowPosition + 1);
         return rowPosition;
     }//end getRowPosition
     

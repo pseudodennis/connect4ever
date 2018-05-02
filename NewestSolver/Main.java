@@ -38,9 +38,7 @@ public class Main {
                     try {
                         do {
                             System.out.print("\nSelect a column to drop your piece (1-7): ");
-                            GamePlay gp = new GamePlay();
-                            System.out.println(gp.getValue() + "HELO");
-                            Scanner in = new Scanner(System.in);
+                            //Scanner in = new Scanner(System.in);
                             //columnPosition = in.nextInt();
                             columnPosition = hardware_connect.getNum();
                         } while (theBoard.checkFullColumn(columnPosition-1));
@@ -55,6 +53,7 @@ public class Main {
             //If X played last, then O plays now (red color)
                 case State.X:
                     GamePlay computerMove = computerPlayer.getNextMove(theBoard);
+                    hardware_connect.sendNum(computerMove.col+1);
                     theBoard.makeMove(computerMove.col, State.O);
                     System.out.println("Computer "+(computerMove.col+1)+".");
                     System.out.println();

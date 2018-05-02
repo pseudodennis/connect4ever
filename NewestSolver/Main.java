@@ -19,6 +19,13 @@ public class Main {
 	computerPlayer = new MinMax(State.O);
 	theBoard = new State();
 	System.out.println("Connect 4 in Java!\n");
+	
+	boolean err = false;
+	err = hardware_connect.Connect();
+	if(err == true)
+    {
+        System.exit(0);
+    }
 	theBoard.printBoard();
         //While the game has not finished
 	while(!theBoard.checkGameOver()) {
@@ -31,7 +38,8 @@ public class Main {
                         do {
                             System.out.print("\nSelect a column to drop your piece (1-7): ");
                             Scanner in = new Scanner(System.in);
-                            columnPosition = in.nextInt();
+                            //columnPosition = in.nextInt();
+                            columnPosition = hardware_connect.getNum();
                         } while (theBoard.checkFullColumn(columnPosition-1));
                     } catch (Exception e){
                         System.out.println("\nValid numbers are 1,2,3,4,5,6 or 7. Try again\n");
@@ -65,5 +73,6 @@ public class Main {
             System.out.println("It's a draw!");
         }
         System.out.println("Game over.");
+        hardware_connect.DisConnect();
     }
 }//end class Main

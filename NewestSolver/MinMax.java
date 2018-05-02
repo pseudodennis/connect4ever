@@ -15,7 +15,7 @@ public class MinMax {
     ////////////////////
 
     public MinMax(int thePlayerLetter) {
-        maxDepth = 5; //This is important to get a better decision (more depth, more accurate decision, more time)
+        maxDepth = 6; //This is important to get a better decision (more depth, more accurate decision, more time)
         computerLetter = thePlayerLetter;
     }//end Constructor
 

@@ -55,6 +55,7 @@ public class GamePlay {
     public void setCol(int aCol) {
         col = aCol;
     }//end setCol
+    
 
     public void setValue(int aValue) {
         value = aValue;

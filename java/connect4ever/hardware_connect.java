@@ -1,4 +1,4 @@
-package Legacy;
+package connect4ever;
 
 import com.fazecast.jSerialComm.SerialPort;
 

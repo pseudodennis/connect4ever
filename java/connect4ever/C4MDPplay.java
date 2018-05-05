@@ -105,10 +105,10 @@ public class C4MDPplay implements MDP<C4MDPplay.GameObservation, Integer, Discre
 		//  check if the action is legal with a HashSet(!)
 	        int[] legalActions = c4board.getLegalActions();
 	        Set<Integer> legalSet = new HashSet<Integer>();
-	            for (int i=0; i<legalActions.length; i++)
-	            {
-	                legalSet.add(legalActions[i]);
-	            }
+			for (int i=0; i<legalActions.length; i++)
+			{
+				legalSet.add(legalActions[i]);
+			}
 	        // System.out.println(legalSet.toString()); // print legal moves for debugging
 
         if (!legalSet.add(action)) // if the move is legal...

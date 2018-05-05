@@ -21,17 +21,17 @@ public class C4Train
     public static QLearning.QLConfiguration CARTPOLE_QL =
         new QLearning.QLConfiguration(
             123,    //Random seed
-            100,    //Max step By epoch
-            100000, //Max step
+            50,    //Max step By epoch
+            12000, //Max step -- running about 12000 steps per hour
             1000000, //Max size of experience replay
             32,     //size of batches
-            100,    //target update (hard)
-            10,     //num step noop warmup
+            500,    //target update (hard)
+            0,     //num step noop warmup
             1,   //reward scaling
-            0.9,   //gamma
+            0.95,   //gamma
             1.0,    //td-error clipping
             0.1f,   //min epsilon
-            50000,   //num step for eps greedy anneal
+            6000,   //num step for eps greedy anneal
             true    //double DQN
         );
 
@@ -39,7 +39,7 @@ public class C4Train
 
     public static DQNFactoryStdDense.Configuration CARTPOLE_NET =
         DQNFactoryStdDense.Configuration.builder()
-            .l2(0.001).updater(new Adam(0.0025)).numHiddenNodes(42).numLayer(3).build();
+            .l2(0.001).updater(new Adam(0.005)).numHiddenNodes(42).numLayer(3).build();
 
 
     public static void main(String[] args) throws IOException
@@ -72,7 +72,8 @@ public class C4Train
         DQNPolicy<C4MDP.GameObservation> pol = dql.getPolicy();
 
         //save the model at the end
-        pol.save("c4-dql-010.model");
+        pol.save("c4-dql-013.model");
+        // TODO write class that generates filename with current datetime and allows C4Play to automatically load the most recent one
 
         //close the ALE env
         mdp.close();

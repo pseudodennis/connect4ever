@@ -6,35 +6,37 @@ import org.deeplearning4j.rl4j.space.ArrayObservationSpace;
 import org.deeplearning4j.rl4j.space.DiscreteSpace;
 import org.deeplearning4j.rl4j.space.Encodable;
 import org.deeplearning4j.rl4j.space.ObservationSpace;
-
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
+/**
+ * This MDP is used for playing the DQN against a given opponent. To set opponent type, see the instance variable below.
+ * The C4MDPplay class contains all the methods the DQN needs to step through a series of games/epochs.
+ * MDP, or Markov Decision Process, is a formal way of expressing state-action-reward relationships for reinforcement learning.
+ * See chapter 3 of Sutton and Barto, "Reinforcement Learning: An Introduction," [Author's Website](http://incompleteideas.net/book/the-book-2nd.html).
+ * Class design based on the deeplearning4j example [ALEMDP](https://github.com/deeplearning4j/rl4j/blob/master/rl4j-ale/src/main/java/org/deeplearning4j/rl4j/mdp/ale/ALEMDP.java)
+ */
 
 public class C4MDPplay implements MDP<C4MDPplay.GameObservation, Integer, DiscreteSpace>
 {
-    protected       C4Board c4board;
-    protected       int[] actions;
-    final protected DiscreteSpace discreteSpace;
-    final protected ObservationSpace<GameObservation> observationSpace;
-    private         int[][] matrixBoard;
-    protected       double scaleFactor = 1; // the amount by which to multiply the reward
-    C4CPU opponent;
-    int stepCount;
+    protected C4Board c4board;													// environment that contains the gameplay states and methods
+    protected int[] actions;													// array of valid actions; i.e. the column indices
+    final protected DiscreteSpace discreteSpace;								// the space in which the agent is able to act within, essentially the int[] actions. Cannot be updated mid-game, unfortunately.
+    final protected ObservationSpace<GameObservation> observationSpace;			// in most environments, this would be various conditions that define a particular game situation (distance from enemy, player speed, etc). For connect four, it is the board state itself.
+    protected C4CPU opponent;													// the other agent the DQN is playing against. Different types could be eventually set with different classes or within the same C4CPU class.
+    protected int stepCount;													// accumulator for the .steps taken; does not reset after .isDone() to allow monitoring of training progress.
 
+	protected SolverState theBoard;												//  for the Solver classes
+	protected SolverMinMax computerPlayer;										//  for the Solver classes
 
-    int opponentType = 1;		//	set the opponent type for the DQN to play against:
-								//	0:	Random opponent (default value)
-								//	1:	Human opponent via keyboard
-								//	2:	Human opponent via Arduino
-								//	3:	Solver opponent
+	int opponentType = 1;		//	set the opponent type for the DQN to play against:
+	//	0:	Random opponent (default value)
+	//	1:	Human opponent via keyboard
+	//	2:	Human opponent via Arduino
+	//	3:	Solver opponent
 
-    //  for the Solver classes
-    	int columnPosition;
-    	SolverState theBoard;
-    	SolverMinMax computerPlayer;
 
     // constructor for the MDP
     public C4MDPplay() // the MDP referenced by the DQN

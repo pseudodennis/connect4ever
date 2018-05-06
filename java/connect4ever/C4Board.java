@@ -1,97 +1,157 @@
+// TODO update javadoc for block of 10 setters and getters
+
 package connect4ever;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
 /**
- * @author hjpoe
- * @author pseudodennis
- * @author ianj98
+ * This class represents the game board environment.
+ * Has methods pertaining to score-keeping, making moves, and checking for wins and ties.
  */
 
 public class C4Board
 {
-    private int[][] boardState;
-    private int movesLeft;
-    private int finalScore; // positive for player1 victory, negative for player2 victory
+    private int[][] boardState;													// the connect four game board as a int[][]
+	private int[] legalActions;													// the list of legal actions, for move validation
+	private int movesLeft;														// starts with 42, decrements after each successful .addPiece()
+    private int finalScore;														// calculated from movesLeft after a win or tie
     private boolean gameOver = false;
     private boolean tiegame = false;
-    private boolean player1turn;
-    private int dqnValid;
-    private int dqnInvalid;
+    private int dqnValid;														// number of valid moves the DQN has made this game, for tuning/debugging
+    private int dqnInvalid;														// number of invalid moves...
 
-    int nRows = 6;  // the number of rows in the board
-    int nCols = 7;  // the number of cols in the board
-
-    private int player1color = 1;
-    private int player2color = 2;
-
-    private int[] legalActions;
+    private int nRows = 6;  													// the number of rows in the board
+    private int nCols = 7;  													// the number of cols in the board
 
     /**
-     * This Constructor initializes a two dimentional array to the size of the
-     * board, sets the starting score to 42, and the game over state to false.
+     * Constructor initializes a two dimensional array and sets relevant data for starting values
      */
-
     public C4Board()
     {
         this.boardState = new int[nRows][nCols];
-
-        this.movesLeft = 42;
+        this.movesLeft = 42;													// TODO calculate from array size
         this.gameOver = false;
-        this.player1turn = true;
         this.legalActions = new int[] {0, 1, 2, 3, 4, 5, 6};
         this.dqnInvalid=0;
         this.dqnValid=0;
     }
 
+	/**
+	 * Setter for gameOver
+	 * @param gameOver A boolean that indicates if the game is over.
+	 */
+	public void setGameOver(boolean gameOver)
+	{
+		this.gameOver = gameOver;
+	}
+
+	/**
+	 * Getter for gameOver
+	 * @return boolean True if the game is over.
+	 */
+	public boolean isGameOver()
+	{
+		return gameOver;
+	}
+
+	/**
+	 * Getter for dqnValid accumulator
+	 * Useful for tracking ratio of in/valid steps taken.
+	 * @return int of valid moves made by the dqn so far.
+	 */	public int getDqnValid()
+	{
+		return dqnValid;
+	}
+
+	/**
+	 * Setter for the dqnValid accumulator.
+	 * Useful for tracking ratio of in/valid steps taken.
+	 * @param dqnValid int of valid moves made by the dqn so far.
+	 */
+	public void setDqnValid(int dqnValid)
+	{
+		this.dqnValid = dqnValid;
+	}
+
+	/**
+	 * Getter for the dqnInvalid accumulator.
+	 * Useful for stopping the training epoch after n invalid moves, etc.
+	 * @return int The invalid moves made by the dqn so far.
+	 */
+	public int getDqnInvalid()
+	{
+		return dqnInvalid;
+	}
+
+	/**
+	 * Setter for the dqnInvalid accumulator.
+	 * Useful for stopping the training epoch after n invalid moves, etc.
+	 * @param dqnInvalid The int of invalid moves made by the dqn so far.
+	 */
+	public void setDqnInvalid(int dqnInvalid)
+	{
+		this.dqnInvalid = dqnInvalid;
+	}
+
+	/**
+	 * Getter for legalActions
+	 * @return int[] The list of column indices that are not full.
+	 */
+	public int[] getLegalActions()
+	{
+		return this.legalActions;
+	}
+
+	/**
+	 * Getter for boardState
+	 * @return int[][] The current board arrangement
+	 */
+	public int[][] getBoardState()
+	{
+		return this.boardState;
+	}
+
+	/**
+	 * Getter for finalScore.
+	 * @return int The final score, calculated from moves made
+	 */
+	public int getFinalScore()
+	{
+		return finalScore;
+	}
+
+	/**
+	 * Getter for tieGame
+	 * @return boolean true if game has ended in tie.
+	 */
+	public boolean isTiegame()
+	{
+		return tiegame;
+	}
+
+	/**
+	 * Resets the board. Needed (ultimately) for the MDP interface.
+	 */
     public void reset()
     {
         this.boardState = new int[nRows][nCols];
-
         this.movesLeft = 42;
         this.gameOver = false;
         this.tiegame = false;
-        this.player1turn = true;
         this.finalScore = 0;
         this.legalActions = new int[] {0, 1, 2, 3, 4, 5, 6};
         this.dqnInvalid=0;
         this.dqnValid=0;
-    }
+    } // end of .reset()
 
-    public void setGameOver(boolean gameOver)
-    {
-        this.gameOver = gameOver;
-    }
 
-    public int getDqnValid()
-    {
-        return dqnValid;
-    }
 
-    public void setDqnValid(int dqnValid)
-    {
-        this.dqnValid = dqnValid;
-    }
-
-    public int getDqnInvalid()
-    {
-        return dqnInvalid;
-    }
-
-    public void setDqnInvalid(int dqnInvalid)
-    {
-        this.dqnInvalid = dqnInvalid;
-    }
-
-    public int[] getLegalActions()
-    {
-        return this.legalActions;
-    }
-
-    // checks each column to see if the top row is empty; if so, adds that column number to the List of legal actions
+	/**
+	 * Checks each column to see if the top row is empty;
+	 * if so, adds that column number to the List of legal actions
+	 */
     public void updateLegalActions()
     {
         // TODO find a better way to do this; Treeset?
@@ -118,29 +178,13 @@ public class C4Board
         this.legalActions = availCols;
     } // end of updateLegalActions
 
-    public boolean isGameOver()
-    {
-        return gameOver;
-    }
-
-    /*	*//**
- * One gameOver to rule them all
- * @return
- *//*
-	public void checkGameOver()
-	{
-		if (this.win())
-			this.gameOver = true;
-		if (this.tie())
-			this.gameOver = true;
-	}*/
-
     /**
      * The win method determines if the game has been won.
+	 * Cycles through each array element, adds that value to a HashSet (unless 0),
+	 * then checks the next three array elements to see if they can also be added to the HashSet.
+	 * If all of them cannot, it returns a win.
      * @return A boolean that is true if the game has been won.
      */
-
-
     public void win()
     {
         int iRow = 0;   // row index number for incrementing
@@ -148,7 +192,7 @@ public class C4Board
         int cl = 4;     // length of chain for indexing
         boolean win = false;
 
-// check for horizontal wins
+	// check for horizontal wins
 
         // move through each cell, unless the cells are within 4 spaces of nCols
 
@@ -175,7 +219,7 @@ public class C4Board
         }
 
 
-// check for vertical wins
+	// check for vertical wins
 
         // move through each cell, unless the cells are within 4 spaces of nCols
 
@@ -202,8 +246,7 @@ public class C4Board
             } // end of moving through columns
         }
 
-
-// check for downhill diag wins
+	// check for downhill diag wins
 
         // move through each cell, unless the cells are within 4 spaces of nCols
 
@@ -230,7 +273,7 @@ public class C4Board
             } // end of moving through columns
         }
 
-// check for uphill diag wins
+	// check for uphill diag wins
 
         // move through each cell, unless the cells are within 4 spaces of nCols
 
@@ -260,13 +303,12 @@ public class C4Board
         if (win)
             this.gameOver = true;
 
-    } // end of win
+    } // end of .win()
 
     /**
      * The tie method determines if the game was a tie.
      * @return A boolean that is true if the game is a tie.
      */
-
     public void tie()
     {
         if (this.movesLeft==0)
@@ -275,31 +317,19 @@ public class C4Board
             this.tiegame = true;
         }
 
-    } // end of tie
+    } // end of .tie()
 
-    public boolean isTiegame()
-    {
-        return tiegame;
-    }
-
-    /**
-     * In the main method, wrap each player turn in
-     * while(board.isPlayer1Turn()==true/false && board.isGameOver==false)
-     * loops
-     * @param column
-     */
+	/**
+	 * Adds a piece to the given column in the game board,
+	 * then checks for win, tie, updates legal actions,
+	 * and assigns a final score if win
+	 * @param column The column into which the player decides to move
+	 * @param playerColor The piece color of the player, 1 or 2
+	 * TODO try different player numbers (1, -1, etc) to see if the learning rate is affected
+	 */
     public void addPiece(int column, int playerColor)
     {
         boolean moveYet = false;
-        String printMove;
-        if (playerColor == 1)
-            printMove = "X (DQN) move: " + column;
-        else if (playerColor == 2)
-            printMove = "O (RAND) move: " + column;
-        else
-            printMove = playerColor + ": " + column;
-
-        //System.out.println(printMove);
 
         // within the column, start at the 'bottom' and go 'up'
         for (int i = 5; i>=0 || !moveYet; i--)
@@ -314,33 +344,26 @@ public class C4Board
 
         }
 
+        // update moves left, legal actions, and check for win, tie
         this.movesLeft--;
         this.win();
         this.tie();
         this.updateLegalActions();
-
 
         // check for win and change score, or else wait for other player to move
         if (this.isGameOver())
         {
             this.finalScore = this.movesLeft;
         }
-    } // end of addPiece()
+    } // end of .addPiece()
 
 
-    public int[][] getBoardState()
-    {
-        return this.boardState;
-    }
-
-
-    public int getFinalScore()
-    {
-        return finalScore;
-    }
-
-
-
+	/**
+	 * Represents the current board state in a pretty table.
+	 * Depicts player 1 as "O", player 2 as "O".
+	 * The first column is "1", so column-index values will need to be offset when printing elsewhere
+	 * @return String representation of the board
+	 */
     public String toString()
     {
         int iCol = 0;
@@ -365,11 +388,14 @@ public class C4Board
         boardString = columnHeaders + boardString;
 
         return boardString;
-    }
+    } // end of .toString()
 
 
-
-
+	/**
+	 * Since the MDP interface can only accept a 1D array, this method flattens the 2D board to a 1D double[]
+	 * TODO figure out how to read the board as an array with 3 layers of depth (empty, red, black), like CNNs do with RGB arrays
+	 * @return double[] the flattened board state
+	 */
     public double[] encode()
     {
         double[] flatBoard = new double[42];
@@ -385,6 +411,6 @@ public class C4Board
         } // end processing arrays
 
         return flatBoard;
-    }
+    } // end of .encode()
 
-} // end of Legacy.Board
+} // end of C4Board

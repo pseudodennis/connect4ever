@@ -17,7 +17,7 @@ public class SolverMinMax {
     ////////////////////
 
     public SolverMinMax(int thePlayerLetter) {
-        maxDepth = 6; //This is important to get a better decision (more depth, more accurate decision, more time)
+        maxDepth = 3; //This is important to get a better decision (more depth, more accurate decision, more time)
         computerLetter = thePlayerLetter;
     }//end Constructor
 

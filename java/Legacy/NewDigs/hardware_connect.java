@@ -139,7 +139,7 @@ public class hardware_connect {
       try {Thread.sleep(1); } 
       catch(Exception e) {}
    
-      try{exitNum = Integer.parseInt(inputNum.nextLine());} // gets a number from the seral port, hopefuly its a 99
+      try{exitNum = Integer.parseInt(inputNum.nextLine());} // gets a number from the seral port, hopefully its a 99
       catch(Exception e){}
       
       

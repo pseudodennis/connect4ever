@@ -64,7 +64,7 @@ public class hardware_connect {
          {
             System.out.println("connected");
          }
-      }while(isConnected == false && !comInput.equals("exit")); // exits loop if connected to user selected port or if uesr enters exit
+      }while(isConnected == false && !comInput.equals("exit")); // exits loop if connected to user selected port or if user enters exit
       return (errorExit); // returns if there was an error, if theres an error in connecting, the class that called it can use the return value to stop and pervent other errors higher up
    }
 
@@ -77,14 +77,14 @@ public class hardware_connect {
          numStart = 77;       // if human goes first, the number is changed to 77 to tell the arduino that a human is going first
       }
    	
-      // clears any exart data from the termanal and seral port
+      // clears any extra data from the termanal and seral port
       // mainly used to clear prevous data from last run 
       output.println();
       output.flush();
       try {Thread.sleep(100); } 
       catch(Exception e) {}
       
-      // makes the program pause for about 5 second, so the arduino can finnish setting up for user input and output through the serial port   
+      // makes the program pause for about 5 seconds, so the arduino can finish setting up for user input and output through the serial port   
       try        
       {
          Thread.sleep(5678);
@@ -107,7 +107,7 @@ public class hardware_connect {
    public static void sendNum (int num) // sends number data to the arduino
    {
    	
-      output.print(num); // sends number to seral port
+      output.print(num); // sends number to serial port
       output.flush();
       try {Thread.sleep(100); } 
       catch(Exception e) {}
@@ -120,32 +120,32 @@ public class hardware_connect {
       do {            // arduino will constantly send 0s until it is told to send something else
                      // the loop allows the code reject all the 0's and wait for actual data from the arduino 
          num = 0;
-         try{num = Integer.parseInt(inputNum.nextLine());} //gets number from the seral port
+         try{num = Integer.parseInt(inputNum.nextLine());} //gets number from the serial port
          catch(Exception e){}
       
       }while(num == 0);
-      return (num); //returns non 0 number from the arduino
+      return (num); //returns non-0 number from the arduino
    }
 	
-   public static void DisConnect() // tells the arduino to stop running the code and shutdown and then disconnects from the serial port 
+   public static void DisConnect() // tells the arduino to stop running the code and shut down and then disconnects from the serial port 
    {
-      output.print(50); // sends a 50 to the arduino, this tell the arduino to stop running the code and shutdow
+      output.print(50); // sends a 50 to the arduino, this tell the arduino to stop running the code and shut down
       output.flush();
       try {Thread.sleep(100); } 
       catch(Exception e) {}
       
       int exitNum = 0;
-      do{                    // enters a loop that waits for the arduino to send a 99 so java know that the arduino got the 50 and has started to shutdown
+      do{                    // enters a loop that waits for the arduino to send a 99 so java know that the arduino got the 50 and has started to shut down
       try {Thread.sleep(1); } 
       catch(Exception e) {}
    
-      try{exitNum = Integer.parseInt(inputNum.nextLine());} //gets a number from the seral port, hopely its a 99
+      try{exitNum = Integer.parseInt(inputNum.nextLine());} // gets a number from the seral port, hopefuly its a 99
       catch(Exception e){}
       
       
       }while(exitNum != 99);
       System.out.println("arduino stopped");   
-      portSel.closePort();                     //disconnect from the serial port and closes the connection
+      portSel.closePort();                     // disconnect from the serial port and closes the connection
       System.out.println("disconnected");
    }
 }

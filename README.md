@@ -1,13 +1,13 @@
 # connect4ever
 Machine learning project for CIS111B Spring 2018 Evening
 
-Objective: To build a Connect Four AI with a model-free, reinforcement learning approach that uses a convolutional neural network. 
+Objective: To build a Connect Four AI with a model-free, reinforcement learning algorithm that utilizes a DQN. 
 
-Attributions:
-All "Solver" classes cloned from:
-https://github.com/raulgonzalezcz/Connect4-AI-Java (MIT License)  
+Attributions:  
+  - ["Solver" classes](https://github.com/raulgonzalezcz/Connect4-AI-Java) (MIT License)  
+  - [Deeplearning4j Framework](https://deeplearning4j.org/)  
 
-
-[Design Decisions](https://github.com/pseudodennis/connect4ever/blob/master/Design%20Decisions.docx)  
-[UML Diagram](https://github.com/pseudodennis/connect4ever/blob/master/UML-light.png)  
-[Video Overview]()  
+Required documents:  
+  - [Design Decisions](https://github.com/pseudodennis/connect4ever/blob/master/Design%20Decisions.docx)  
+  - [UML Diagram](https://github.com/pseudodennis/connect4ever/blob/master/UML-light.png)  
+  - [Video Overview]()  

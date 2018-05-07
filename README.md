@@ -9,5 +9,5 @@ https://github.com/raulgonzalezcz/Connect4-AI-Java (MIT License)
 
 
 [Design Decisions](https://github.com/pseudodennis/connect4ever/blob/master/Design%20Decisions.docx)  
-[UML Diagram](https://github.com/pseudodennis/connect4ever/blob/master/UML-light.png)
+[UML Diagram](https://github.com/pseudodennis/connect4ever/blob/master/UML-light.png)  
 [Video Overview]()  

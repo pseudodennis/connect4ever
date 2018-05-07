@@ -11,4 +11,4 @@ Required documents:
   - [Java class files](https://github.com/pseudodennis/connect4ever/tree/master/java/connect4ever)
   - [Design Decisions](https://github.com/pseudodennis/connect4ever/blob/master/Design%20Decisions.docx)  
   - [UML Diagram](https://github.com/pseudodennis/connect4ever/blob/master/UML-light.png)  
-  - [Video Overview]()  
+  - [Video Overview](https://youtu.be/ATm-1p-iFV4)  

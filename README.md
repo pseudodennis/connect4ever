@@ -5,6 +5,8 @@ Objective: To build a Connect Four AI with a model-free, reinforcement learning 
 
 Attributions:
 All "Solver" classes cloned from:
-https://github.com/raulgonzalezcz/Connect4-AI-Java (MIT License)
+https://github.com/raulgonzalezcz/Connect4-AI-Java (MIT License)  
 
 
+[Design Decisions](https://github.com/pseudodennis/connect4ever/blob/master/Design%20Decisions.docx)  
+[Video Overview]()  

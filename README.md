@@ -8,6 +8,7 @@ Attributions:
   - [Deeplearning4j Framework](https://deeplearning4j.org/)  
 
 Required documents:  
+  - [Java class files](https://github.com/pseudodennis/connect4ever/tree/master/java/connect4ever)
   - [Design Decisions](https://github.com/pseudodennis/connect4ever/blob/master/Design%20Decisions.docx)  
   - [UML Diagram](https://github.com/pseudodennis/connect4ever/blob/master/UML-light.png)  
   - [Video Overview]()  
